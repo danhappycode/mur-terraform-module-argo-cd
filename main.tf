@@ -10,7 +10,7 @@ provider "helm" {
   }
 }
 
-resource "kubernetes_namespace" "argo-ns" {
+resource "kubernetes_namespace" "argocd" {
   metadata {
     name = "argocd"
   }
