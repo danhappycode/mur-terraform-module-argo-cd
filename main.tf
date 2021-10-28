@@ -20,9 +20,9 @@ provider "helm" {
   }
 }
 
-resource "kubernetes_namespace" "example" {
+resource "kubernetes_namespace" "argo-ns" {
   metadata {
-    name = "argo"
+    name = "argocd"
   }
 }
 
@@ -30,6 +30,6 @@ resource "helm_release" "argocd" {
   name       = "msur"
   chart      = "argo-cd"
   repository = "https://argoproj.github.io/argo-helm"
-  namespace  = "argo"
+  namespace  = "argocd"
 }
 
