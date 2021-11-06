@@ -1,3 +1,8 @@
+variable "aws_region" {
+  type    = string
+  default = "eu-central-1"
+}
+
 variable "kubernetes_cluster_id" {
   type = string
 }
